@@ -1,0 +1,492 @@
+# Instincts generated from https://github.com/SAISUHAS-Y/Hibernate
+# Generated: 2026-02-28T14:02:02.345Z
+# Version: 2.0
+
+---
+id: Hibernate-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 22 chars
+- Based on 11 commits
+
+---
+id: Hibernate-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: Hibernate-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: Hibernate-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: Hibernate-workflow-new-hibernate-maven-project
+trigger: "when doing new hibernate maven project"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Workflow New Hibernate Maven Project
+
+## Action
+
+Follow the new-hibernate-maven-project workflow:
+1. Create Maven project structure (.classpath, .project, .settings/)
+2. Add pom.xml with Hibernate dependencies
+3. Create main App.java file
+4. Add entity classes in entity/ package
+5. Create DAO classes in dao/ package
+6. Add hibernate.cfg.xml configuration
+7. Create AppTest.java in test directory
+8. Generate target/ compiled classes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: .classpath, .project, .settings/*.prefs
+
+---
+id: Hibernate-workflow-hibernate-entity-relationship-setup
+trigger: "when doing hibernate entity relationship setup"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Workflow Hibernate Entity Relationship Setup
+
+## Action
+
+Follow the hibernate-entity-relationship-setup workflow:
+1. Create related entity classes
+2. Add relationship annotations
+3. Create main App.java to demonstrate relationship
+4. Add hibernate.cfg.xml with entity mappings
+5. Generate compiled classes in target/
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: src/main/java/*/entity/*.java, src/main/java/*/App.java, src/main/java/hibernate.cfg.xml
+
+---
+id: Hibernate-workflow-hibernate-crud-operations
+trigger: "when doing hibernate crud operations"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Workflow Hibernate Crud Operations
+
+## Action
+
+Follow the hibernate-crud-operations workflow:
+1. Create App_Insert.java for create operations
+2. Create App_Fetch.java for read operations
+3. Create App_Update.java for update operations
+4. Create App_Delete.java for delete operations
+5. Add entity class
+6. Configure hibernate.cfg.xml
+7. Compile all classes to target/
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/main/java/*/App_Insert.java, src/main/java/*/App_Fetch.java, src/main/java/*/App_Update.java
+
+---
+id: Hibernate-workflow-hibernate-query-implementation
+trigger: "when doing hibernate query implementation"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Workflow Hibernate Query Implementation
+
+## Action
+
+Follow the hibernate-query-implementation workflow:
+1. Create App_HQL.java for HQL queries
+2. Create App_SQL.java for native SQL queries
+3. Create App_Criteria.java for Criteria API
+4. Create App_CriteriaBuilder.java for Criteria Builder API
+5. Add entity classes
+6. Configure hibernate mapping
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: src/main/java/*/hql/App_HQL.java, src/main/java/*/sql/App_SQL.java, src/main/java/*/criteria/App_Criteria.java
+
+---
+id: hibernate-java-naming
+trigger: "When creating Java classes in Hibernate project"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Java Naming
+
+## Action
+
+Use PascalCase for class names and file names
+
+## Evidence
+
+- App.java, App_Insert.java, App_Fetch.java pattern
+- Entity classes follow PascalCase
+
+---
+id: hibernate-method-naming
+trigger: "When creating methods in Java classes"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Method Naming
+
+## Action
+
+Use camelCase for method names
+
+## Evidence
+
+- Standard Java conventions observed in entity and DAO classes
+
+---
+id: hibernate-constants-naming
+trigger: "When defining constants in Java classes"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Constants Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Java naming conventions pattern in codebase
+
+---
+id: hibernate-separate-test-files
+trigger: "When adding tests to Hibernate project"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Separate Test Files
+
+## Action
+
+Create AppTest.java files in src/test/java directory
+
+## Evidence
+
+- AppTest.java in test directory pattern
+- Maven standard test structure
+
+---
+id: hibernate-informal-commits
+trigger: "When committing changes to Hibernate repository"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Informal Commits
+
+## Action
+
+Use informal, descriptive commit messages without prefixes
+
+## Evidence
+
+- Shopping Cart
+- Example Project
+- Demo Project
+- Chache Mechanism using Level 1 & 2 chache
+
+---
+id: hibernate-maven-project-setup
+trigger: "When starting a new Hibernate project"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Maven Project Setup
+
+## Action
+
+Create Maven structure with .classpath, .project, .settings/, and pom.xml first
+
+## Evidence
+
+- new-hibernate-maven-project workflow appears 8 times
+- Consistent Maven project structure
+
+---
+id: hibernate-entity-package-organization
+trigger: "When creating entity classes"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Entity Package Organization
+
+## Action
+
+Place entity classes in separate entity/ package under src/main/java
+
+## Evidence
+
+- src/main/java/*/entity/*.java pattern
+- Entity organization in all workflows
+
+---
+id: hibernate-dao-pattern
+trigger: "When implementing data access in Hibernate project"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Dao Pattern
+
+## Action
+
+Create DAO classes in separate dao/ package
+
+## Evidence
+
+- src/main/java/*/dao/*.java in new-hibernate-maven-project workflow
+
+---
+id: hibernate-config-placement
+trigger: "When configuring Hibernate in project"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Config Placement
+
+## Action
+
+Place hibernate.cfg.xml in src/main/java directory
+
+## Evidence
+
+- src/main/java/hibernate.cfg.xml appears in all workflows
+
+---
+id: hibernate-relationship-annotations
+trigger: "When implementing entity relationships"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Relationship Annotations
+
+## Action
+
+Add relationship annotations to entity classes and create demonstration App.java
+
+## Evidence
+
+- hibernate-entity-relationship-setup workflow frequency 5
+- Hibernate Entity Relationship commit
+
+---
+id: hibernate-crud-separation
+trigger: "When implementing CRUD operations"
+confidence: 0.82
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Crud Separation
+
+## Action
+
+Create separate App files for each operation (App_Insert.java, App_Fetch.java, App_Update.java, App_Delete.java)
+
+## Evidence
+
+- hibernate-crud-operations workflow pattern
+- Separate CRUD App files structure
+
+---
+id: hibernate-query-type-organization
+trigger: "When implementing different query types"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Query Type Organization
+
+## Action
+
+Organize query implementations in separate packages (hql/, sql/, criteria/, criteriabuilder/)
+
+## Evidence
+
+- Custom Query using HQL, Native Query and Critera & Critera Builder commit
+- Query type separation pattern
+
+---
+id: hibernate-target-compilation
+trigger: "When building Hibernate project"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Target Compilation
+
+## Action
+
+Generate compiled classes in target/classes directory structure
+
+## Evidence
+
+- target/classes/** pattern in multiple workflows
+- Maven compilation structure
+
+---
+id: hibernate-cache-implementation
+trigger: "When implementing caching in Hibernate"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Cache Implementation
+
+## Action
+
+Create separate project folder for cache mechanism demonstrations
+
+## Evidence
+
+- Chache Mechanism using Level 1 & 2 chache commit
+- Hibernate-Chache folder
+
+---
+id: hibernate-jpa-integration
+trigger: "When working with JPA specifications in Hibernate"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: SAISUHAS-Y/Hibernate
+---
+
+# Hibernate Jpa Integration
+
+## Action
+
+Create dedicated project folder for JPA implementation
+
+## Evidence
+
+- JPA spcification commit
+- Hibernate_JPA folder
+
